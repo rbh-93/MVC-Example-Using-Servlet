@@ -1,7 +1,6 @@
 # MVC-Example-Using-Servlet
-A demo Login Page to illustrate MVC Architecture
 
-#-----This is an example of Model-View-Controller Architecture-----
+# -----This is an example of Model-View-Controller Architecture-----
 
 # DESCRIPTION
 
