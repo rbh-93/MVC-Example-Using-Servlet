@@ -1,6 +1,6 @@
 # MVC-Example-Using-Servlet
 
-# -----This is an example of Model-View-Controller Architecture-----
+# ---This is an example of Model-View-Controller Architecture---
 
 # DESCRIPTION
 
