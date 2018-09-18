@@ -1,19 +1,17 @@
 # MVC-Example-Using-Servlet
 
-# Example of Model-View-Controller Architecture
+# Model-View-Controller Architecture
 
-# DESCRIPTION
+Model View Controller is a software architecture pattern which separates the application logic into three different parts. Separation of concerns increases modularity and reuse. The three parts are Model, View and Controller. 
 
-The initial page is the LoginPage JSP which serves as the View.
-The Login JSP asks the user for a User ID and Password.
-The Controller of MVC is implemented using a servlet.
-The LoginController Servlet passes the user request to the LoginService class which contains the business logic.
-The business logic in this case is a dummy password authentication method and a method to get user data. 
-A user list is also implemented in the LoginService class using a Hashmap. The user list contains the User IDs and the corresponding User Names. 
-If password authetication fails, the user is redirected to the initial Login JSP.
-Otherwise, the user is redirected to the SuccessPage JSP which displays the User Name. 
-The User Class contains the getters and setters for the User ID and User Name. 
+- Model: The Model is the data and business logic. 
+- View: The View defines how the data should be presented to the user. It is a User Interface allowing the user to modify the data.
+- Controller: When the user interacts with the view, the user sends requests. These requests are handled by the Controller which displays appropriate data along with view as response to the user.
 
-# MVC ARCHITECTURE AND DATA FLOW
+# Implementation details
 
-The LoginService contains the business logic which constitutes of the Model, the JSPs are the View and the LoginController Servlet is the Controller of MVC. The data flows from the user to the Controller, which passes it to the Service class. The Service class then gives the response back to the Controller based on the user request. Based on this response the required View is generated for the user (in this case the LoginPage JSP and the SuccessPage JSP).
+- LoginPage.jsp: Initial page for Login for the user. This page serves as the View of MVC. LoginPage.jsp asks the user for User ID and Password.
+- Success.jsp: This is also part of the View. Upon successful login, the user is redirected to this page informing the user of a successful login.
+- LoginController.java: The LoginController Servlet is the Controller of MVC and it handles user requests by passing these requests to the LoginService class. 
+- LoginService.java: The LoginService is the MOdel of MVC and it contains the business logic. When the user request is passed to the LoginService, it either redirects the user to Success.jsp page if authentication is successful or to the initial Login.jsp page if authentication fails. The LoginService class contains a dummy user list (User ID and corresponding User Names) implemented using Hashmap and a dummy password authetication method. 
+- User.java: This class contains the getters and setters for the User ID and User Name.
